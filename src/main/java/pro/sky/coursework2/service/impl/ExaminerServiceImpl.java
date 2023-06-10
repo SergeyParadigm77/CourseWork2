@@ -5,7 +5,6 @@ import pro.sky.coursework2.exceptions.TooManyQuestionsException;
 import pro.sky.coursework2.model.Question;
 import pro.sky.coursework2.service.ExaminerService;
 import pro.sky.coursework2.service.QuestionService;
-
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -16,7 +15,6 @@ public class ExaminerServiceImpl implements ExaminerService {
     public ExaminerServiceImpl(QuestionService questionService) {
         this.questionService = questionService;
     }
-
     @Override
     public Collection<Question> getQuestions(int amount) {
         if (questionService.getAll().size() < amount) {
